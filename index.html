@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet">
     <title>cake-clicker</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="flex flex-col h-screen">
+ <header class="bg-pink-200 text-white italic text-5xl text-center">
+    Cake Clicker
+ </header>
+
+<main class="flex flex-1">
+<div class="flex-2 bg-yellow-50">
+<!--clicker area-->
+<p id="scoreDisplay" class="text-center text-3xl font-mono mt-3">Coins</p>
+
+<button id="clicker">
+<img src="src/assets/cake.png" alt="cake" class="ml-55 mt-40">
+</button>
+</div>
+
+<div class="flex-1 bg-red-200">
+<!--upgrades area-->
+
+</div>
+
+<div class="flex-1 bg-green-50">
+<!--store area-->
+
+</div>
+</main>
+
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
