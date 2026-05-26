@@ -15,21 +15,32 @@
 <main class="flex flex-1">
 <div class="flex-2 bg-yellow-50">
 <!--clicker area-->
-<p id="scoreDisplay" class="text-center text-3xl font-mono mt-3">Coins</p>
+<p id="scoreDisplay" class="text-center text-3xl font-mono mt-3">Cash</p>
 
-<button id="clicker">
-<img src="src/assets/cake.png" alt="cake" class="ml-55 mt-40">
+<button class="transition-tranform active:translate-y-3" id="clicker">
+<img src="src/assets/cake.png" alt="cake" class="ml-25 mt-40">
 </button>
 </div>
 
-<div class="flex-1 bg-red-200">
+<div class="flex-2 bg-red-200">
 <!--upgrades area-->
 
 </div>
 
-<div class="flex-1 bg-green-50">
+<div class="flex-2 bg-green-50">
 <!--store area-->
+<h1 class="font-mono text-center text-3xl mt-3 mb-16">Store</h1>
+<button class="bg-blue-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5" id="autoClickerUpgrade">
+  <img src="" alt="">
+  Auto Clicker Upgrade
+</button>
 
+<button class="bg-orange-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5" id="clickValueUpgrade">
+  <img class="w-9" src="src/assets/cash.png">Click Value Upgrade
+</button>
+<button class="bg-purple-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5" id="multiplierUpgrade">
+  Multiplier Upgrade
+</button>
 </div>
 </main>
 
