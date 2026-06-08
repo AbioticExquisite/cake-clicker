@@ -15,6 +15,8 @@ clicker.addEventListener("click", function() {
   let clickAmt = 1 + (click ** 3.05)
   
   updateScore(clickAmt)
+  clickSound.stop()
+  clickSound.play()
 })
 
 let upgradeOne = document.getElementById("upgradeOne")
@@ -26,6 +28,8 @@ upgradeOne.addEventListener("click", function() {
     updateScore(-500)
     click++
     upgradeOneCount.innerText = clicker + '   clicker'
+    clickTwo.stop()
+    clickTwo.play()
   } else {
     alert("Not enough cash!")
   }
@@ -41,6 +45,8 @@ upgradeTwo.addEventListener("click", function() {
     updateScore(-500)
     value++
     upgradeTwoCount.innerText = clicker + '   clicker'
+    clickTwo.stop()
+    clickTwo.play()
   } else {
     alert("Not enough cash!")
   }
@@ -59,3 +65,26 @@ function gameLoop() {
 }
 
 setInterval(gameLoop, 1000)
+
+import { Howl } from 'howler';
+
+import clickSrc from './assets/dishes.mp3';
+import levelUpSrc from './assets/bakery.mp3';
+import clickTwoSrc from './assets/clicktwo.mp3';
+
+const levelUp = new Howl({
+  src: [levelUpSrc],
+autoplay: true,
+loop: true,
+volume: 0.5,
+});
+
+const clickSound = new Howl({
+  src: [clickSrc],
+  volume: 0.5,
+});
+
+const clickTwo = new Howl({
+  src: [clickTwoSrc],
+  volume: 0.5,
+});
