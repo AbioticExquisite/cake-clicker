@@ -69,7 +69,7 @@ setInterval(gameLoop, 1000)
 import { Howl } from 'howler';
 
 import clickSrc from './assets/dishes.mp3';
-import levelUpSrc from './assets/bakery.mp3';
+// import levelUpSrc from './assets/bakery.mp3';
 import clickTwoSrc from './assets/clicktwo.mp3';
 
 const levelUp = new Howl({
