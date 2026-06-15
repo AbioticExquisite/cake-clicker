@@ -8,38 +8,56 @@
     <title>cake-clicker</title>
   </head>
   <body class="flex flex-col h-screen">
- <header class="bg-pink-200 text-white italic text-5xl text-center">
+ <hr>
+    <header class="bg-pink-200 text-white italic text-5xl text-center">
     Cake Clicker
  </header>
 
+ <hr>
+
 <main class="flex flex-1">
-<div class="flex-2 bg-yellow-50">
+<div class="flex-2 bg-yellow-50/70">
 <!--clicker area-->
 <p id="scoreDisplay" class="text-center text-3xl font-mono mt-3">Cash</p>
 
 <button class="transition-tranform active:translate-y-3" id="clicker">
-<img src="src/assets/cake.png" alt="cake" class="ml-25 mt-40">
+<img src="src/assets/cake.png" alt="cake" class="ml-50 mt-40">
 </button>
 </div>
 
-<div class="flex-2 bg-red-200">
-<!--upgrades area-->
 
-</div>
 
-<div class="flex-2 bg-green-50">
+<div class="flex-2 bg-green-50/70 text-center">
 <!--store area-->
 <h1 class="font-mono text-center text-3xl mt-3 mb-16">Store</h1>
-<button id="upgradeOne" class="bg-blue-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5" id="autoClickerUpgrade">
-  <img class="w-5" src="src/assets/cursor.png" alt="">
-  Auto Clicker Upgrade
+<button id="upgradeTwo" class="bg-blue-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5 flex" id="autoClickerUpgrade">
+  
+  <img class="h-20 mr-4" src="src/assets/cursor.png" alt="cursor">
+ <div class="flex flex-col">
+<p>Auto Clicker Upgrade</p>
+ <p id="upgradeTwoCount">Amount: 0</p>
+<p>Cost: ¢500 cash</p>
+</div>
 </button>
 
-<button id="upgradeTwo" class="bg-orange-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5" id="clickValueUpgrade">
-  <img class="w-9" src="src/assets/cash.png">Click Value Upgrade
+<button id="upgradeOne" class="bg-orange-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5 flex" id="clickValueUpgrade">
+  <img class="h-20 mr-4 mt-1" src="src/assets/cash.png">
+ <div class="flex flex-col">
+    <p>Click Value Upgrade</p>
+     <p id="upgradeOneCount"> Amount: 0</p>
+    <p> Cost: ¢1,000 cash</p>
+    </div>
+
 </button>
-<button class="bg-purple-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5" id="multiplierUpgrade">
-  Multiplier Upgrade
+
+<button id="upgradeThr" class="bg-purple-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5 flex" id="multiplierUpgrade">
+  <img class="h-20 mr-4" src="src/assets/cookie-man.png" alt="cookie-man">
+  <div class="flex flex-col">
+    <p>Cookie Monster</p>
+     <p id="upgradeThrCount">Amount: 0</p>
+    <p>Cost: ¢100,000 cash</p>
+    </div>
+
 </button>
 </div>
 </main>

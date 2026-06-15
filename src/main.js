@@ -1,4 +1,4 @@
-let score = 0
+let score = 500000000
 
 let clicker = document.getElementById("clicker")
 
@@ -24,38 +24,57 @@ let upgradeOneCount = document.getElementById("upgradeOneCount")
 let click = 0
 
 upgradeOne.addEventListener("click", function() {
-  if (score >= 500) {
-    updateScore(-500)
+  if (score >= 1000) {
+    updateScore(-1000)
     click++
-    upgradeOneCount.innerText = clicker + '   clicker'
+    upgradeOneCount.innerText = 'Amount:  ' + click
     clickTwo.stop()
     clickTwo.play()
   } else {
-    alert("Not enough cash!")
+    alert("🚫Not enough cash!")
   }
 
 })
 
 let upgradeTwo = document.getElementById("upgradeTwo")
 let upgradeTwoCount = document.getElementById("upgradeTwoCount")
+
 let value = 0
 
 upgradeTwo.addEventListener("click", function() {
   if (score >= 500) {
     updateScore(-500)
     value++
-    upgradeTwoCount.innerText = clicker + '   clicker'
+    upgradeTwoCount.innerText = 'Amount:  ' + value
     clickTwo.stop()
     clickTwo.play()
   } else {
-    alert("Not enough cash!")
+    alert("🚫Not enough cash!")
+  }
+
+})
+
+let upgradeThr = document.getElementById("upgradeThr")
+let upgradeThrCount = document.getElementById("upgradeThrCount")
+
+let number = 0
+
+upgradeThr.addEventListener("click", function() {
+  if (score >= 100000) {
+    updateScore(-100000)
+    number++
+    upgradeThrCount.innerText = 'Amount:  ' + number
+    clickTwo.stop()
+    clickTwo.play()
+  } else {
+    alert("🚫Not enough cash!")
   }
 
 })
 
 function updateScore(amount) {
   score += amount
-  scoreDisplay.innerText = formatter.format(score) + '  Cash'
+  scoreDisplay.innerText = score.toFixed(0)  + '  Cash'
 }
 
 function gameLoop() {
@@ -69,22 +88,22 @@ setInterval(gameLoop, 1000)
 import { Howl } from 'howler';
 
 import clickSrc from './assets/dishes.mp3';
-// import levelUpSrc from './assets/bakery.mp3';
+import levelUpSrc from './assets/birthday-cake.mp3';
 import clickTwoSrc from './assets/clicktwo.mp3';
 
 const levelUp = new Howl({
   src: [levelUpSrc],
 autoplay: true,
 loop: true,
-volume: 0.5,
+volume: 0.3,
 });
 
 const clickSound = new Howl({
   src: [clickSrc],
-  volume: 0.5,
+  volume: 1.0,
 });
 
 const clickTwo = new Howl({
   src: [clickTwoSrc],
-  volume: 0.5,
+  volume: 1.0,
 });

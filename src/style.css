@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+body {
+    background-image: url('/src/assets/coffe.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+hr {
+    color: white;
+}
