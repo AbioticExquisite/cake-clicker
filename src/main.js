@@ -1,4 +1,4 @@
-let score = 500000000
+let score = 0
 
 let clicker = document.getElementById("clicker")
 
@@ -24,8 +24,8 @@ let upgradeOneCount = document.getElementById("upgradeOneCount")
 let click = 0
 
 upgradeOne.addEventListener("click", function() {
-  if (score >= 1000) {
-    updateScore(-1000)
+  if (score >= 700) {
+    updateScore(-700)
     click++
     upgradeOneCount.innerText = 'Amount:  ' + click
     clickTwo.stop()
@@ -60,8 +60,8 @@ let upgradeThrCount = document.getElementById("upgradeThrCount")
 let number = 0
 
 upgradeThr.addEventListener("click", function() {
-  if (score >= 100000) {
-    updateScore(-100000)
+  if (score >= 1000) {
+    updateScore(-1000)
     number++
     upgradeThrCount.innerText = 'Amount:  ' + number
     clickTwo.stop()
@@ -71,6 +71,60 @@ upgradeThr.addEventListener("click", function() {
   }
 
 })
+
+let upgradeFur = document.getElementById("upgradeFur")
+let upgradeFurCount = document.getElementById("upgradeFurCount")
+let time = 0
+
+upgradeFur.addEventListener("click", function() {
+  if (score >= 500) {
+    updateScore(-500)
+    time++
+    upgradeFurCount.innerText = 'Amount:  ' + time
+    clickTwo.stop()
+    clickTwo.play()
+  } else {
+    alert("🚫Not enough cash!")
+  }
+
+})
+
+let upgradeFiv = document.getElementById("upgradeFiv")
+let upgradeFivCount = document.getElementById("upgradeFivCount")
+
+let val = 0
+
+upgradeFiv.addEventListener("click", function() {
+  if (score >= 700) {
+    updateScore(-700)
+    val++
+    upgradeFivCount.innerText = 'Amount:  ' + val
+    clickTwo.stop()
+    clickTwo.play()
+  } else {
+    alert("🚫Not enough cash!")
+  }
+
+})
+
+let upgradeSix = document.getElementById("upgradeSix")
+let upgradeSixCount = document.getElementById("upgradeSixCount")
+
+let num = 0
+
+upgradeSix.addEventListener("click", function() {
+  if (score >= 1000) {
+    updateScore(-1000)
+    num++
+    upgradeSixCount.innerText = 'Amount:  ' + num
+    clickTwo.stop()
+    clickTwo.play()
+  } else {
+    alert("🚫Not enough cash!")
+  }
+
+})
+
 
 function updateScore(amount) {
   score += amount

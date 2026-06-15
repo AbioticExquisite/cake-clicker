@@ -9,7 +9,7 @@
   </head>
   <body class="flex flex-col h-screen">
  <hr>
-    <header class="bg-pink-200 text-white italic text-5xl text-center">
+    <header class="bg-red-200 text-red-400 italic text-5xl text-center font-serif py-2">
     Cake Clicker
  </header>
 
@@ -18,7 +18,7 @@
 <main class="flex flex-1">
 <div class="flex-2 bg-yellow-50/70">
 <!--clicker area-->
-<p id="scoreDisplay" class="text-center text-3xl font-mono mt-3">Cash</p>
+<p id="scoreDisplay" class="font-serif text-center text-4xl mt-3  text-amber-600 bg-amber-100">Cash</p>
 
 <button class="transition-tranform active:translate-y-3" id="clicker">
 <img src="src/assets/cake.png" alt="cake" class="ml-50 mt-40">
@@ -29,36 +29,68 @@
 
 <div class="flex-2 bg-green-50/70 text-center">
 <!--store area-->
-<h1 class="font-mono text-center text-3xl mt-3 mb-16">Store</h1>
-<button id="upgradeTwo" class="bg-blue-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5 flex" id="autoClickerUpgrade">
-  
-  <img class="h-20 mr-4" src="src/assets/cursor.png" alt="cursor">
+<h1 class="font-serif text-center text-4xl mt-3 mb-4 text-emerald-600 bg-lime-100">Store</h1>
+<p class="font-mono bg-amber-100 ml-48 w-100 text-xl">Ingredients</p>
+
+<button id="upgradeTwo" class="bg-orange-300 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="autoClickerUpgrade">
+  <img class="h-20 mr-4 ml-50" src="src/assets/dough.png" alt="cursor">
  <div class="flex flex-col">
-<p>Auto Clicker Upgrade</p>
+<p  class="font-">Dough</p>
  <p id="upgradeTwoCount">Amount: 0</p>
 <p>Cost: ¢500 cash</p>
 </div>
 </button>
 
-<button id="upgradeOne" class="bg-orange-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5 flex" id="clickValueUpgrade">
-  <img class="h-20 mr-4 mt-1" src="src/assets/cash.png">
+<button id="upgradeOne" class="bg-yellow-100 text-gray-400 font-bold px-4 rounded mt-5 ml-5 flex w-184" id="clickValueUpgrade">
+  <img class="h-15 mr-4 mt-2 ml-55" src="src/assets/egg.png">
  <div class="flex flex-col">
-    <p>Click Value Upgrade</p>
-     <p id="upgradeOneCount"> Amount: 0</p>
-    <p> Cost: ¢1,000 cash</p>
+    <p>Eggs</p>
+     <p id="upgradeOneCount">Amount: 0</p>
+    <p> Cost: ¢700 cash</p>
     </div>
 
 </button>
 
-<button id="upgradeThr" class="bg-purple-300 text-white font-bold py-2 px-4 rounded mt-5 ml-5 flex" id="multiplierUpgrade">
-  <img class="h-20 mr-4" src="src/assets/cookie-man.png" alt="cookie-man">
+<button id="upgradeThr" class="bg-amber-200 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="multiplierUpgrade">
+  <img class="h-22 mr-4 ml-48" src="src/assets/sugar.png" alt="cookie-man">
   <div class="flex flex-col">
-    <p>Cookie Monster</p>
+    <p>Sugar</p>
      <p id="upgradeThrCount">Amount: 0</p>
-    <p>Cost: ¢100,000 cash</p>
+    <p>Cost: ¢1,000 cash</p>
     </div>
 
 </button>
+<p class="font-mono bg-pink-100 ml-50 w-100 text-xl mt-4">Toppings</p>
+
+<button id="upgradeFur" class="bg-rose-200 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="autoClickerUpgrade">
+  <img class="h-20 mr-4 ml-50" src="src/assets/icing.png" alt="icing_pouch">
+ <div class="flex flex-col">
+<p  class="font-">Icing</p>
+ <p id="upgradeFurCount">Amount: 0</p>
+<p>Cost: ¢500 cash</p>
+</div>
+</button>
+
+<button id="upgradeFiv" class="bg-red-300 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="clickValueUpgrade">
+  <img class="h-15 mr-4 mt-2 ml-55" src="src/assets/strawberry.png" alt="strawberry">
+ <div class="flex flex-col">
+    <p>Strawberries</p>
+     <p id="upgradeFivCount">Amount: 0</p>
+    <p> Cost: ¢700 cash</p>
+    </div>
+
+</button>
+
+<button id="upgradeSix" class="bg-red-100 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="multiplierUpgrade">
+  <img class="h-22 mr-4 ml-48" src="src/assets/filling.jpg" alt="filling_bag">
+  <div class="flex flex-col">
+    <p>Filling</p>
+     <p id="upgradeSixCount">Amount: 0</p>
+    <p>Cost: ¢1,000 cash</p>
+    </div>
+
+</button>
+
 </div>
 </main>
 
