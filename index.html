@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/style.css" rel="stylesheet">
-    <title>cake-clicker</title>
+    <title>Estervil's Cake Clicker</title>
   </head>
   <body class="flex flex-col h-screen">
  <hr>
@@ -22,6 +22,10 @@
 
 <button class="transition-tranform active:translate-y-3" id="clicker">
 <img src="src/assets/cake.png" alt="cake" class="ml-50 mt-40">
+<img class="w-70 ml-55" src="src/assets/plate.png" alt="plate-for-cake">
+<button class="bg-yellow-100">
+</button>
+
 </button>
 </div>
 
@@ -35,7 +39,7 @@
 <button id="upgradeTwo" class="bg-orange-300 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="autoClickerUpgrade">
   <img class="h-20 mr-4 ml-50" src="src/assets/dough.png" alt="cursor">
  <div class="flex flex-col">
-<p  class="font-">Dough</p>
+<p  class="font-mono italic">Dough</p>
  <p id="upgradeTwoCount">Amount: 0</p>
 <p>Cost: ¢500 cash</p>
 </div>
@@ -44,7 +48,7 @@
 <button id="upgradeOne" class="bg-yellow-100 text-gray-400 font-bold px-4 rounded mt-5 ml-5 flex w-184" id="clickValueUpgrade">
   <img class="h-15 mr-4 mt-2 ml-55" src="src/assets/egg.png">
  <div class="flex flex-col">
-    <p>Eggs</p>
+    <p class="font-mono italic">Eggs</p>
      <p id="upgradeOneCount">Amount: 0</p>
     <p> Cost: ¢700 cash</p>
     </div>
@@ -54,7 +58,7 @@
 <button id="upgradeThr" class="bg-amber-200 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="multiplierUpgrade">
   <img class="h-22 mr-4 ml-48" src="src/assets/sugar.png" alt="cookie-man">
   <div class="flex flex-col">
-    <p>Sugar</p>
+    <p class="font-mono italic">Sugar</p>
      <p id="upgradeThrCount">Amount: 0</p>
     <p>Cost: ¢1,000 cash</p>
     </div>
@@ -65,18 +69,18 @@
 <button id="upgradeFur" class="bg-rose-200 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="autoClickerUpgrade">
   <img class="h-20 mr-4 ml-50" src="src/assets/icing.png" alt="icing_pouch">
  <div class="flex flex-col">
-<p  class="font-">Icing</p>
+<p  class="font-mono italic">Icing</p>
  <p id="upgradeFurCount">Amount: 0</p>
-<p>Cost: ¢500 cash</p>
+<p>Cost: ¢50,000 cash</p>
 </div>
 </button>
 
 <button id="upgradeFiv" class="bg-red-300 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="clickValueUpgrade">
   <img class="h-15 mr-4 mt-2 ml-55" src="src/assets/strawberry.png" alt="strawberry">
  <div class="flex flex-col">
-    <p>Strawberries</p>
+    <p class="font-mono italic">Strawberries</p>
      <p id="upgradeFivCount">Amount: 0</p>
-    <p> Cost: ¢700 cash</p>
+    <p> Cost: ¢70,000 cash</p>
     </div>
 
 </button>
@@ -84,9 +88,9 @@
 <button id="upgradeSix" class="bg-red-100 text-white font-bold px-4 rounded mt-5 ml-5 flex w-184" id="multiplierUpgrade">
   <img class="h-22 mr-4 ml-48" src="src/assets/filling.jpg" alt="filling_bag">
   <div class="flex flex-col">
-    <p>Filling</p>
+    <p class="font-mono italic">Filling</p>
      <p id="upgradeSixCount">Amount: 0</p>
-    <p>Cost: ¢1,000 cash</p>
+    <p>Cost: ¢100,000 cash</p>
     </div>
 
 </button>

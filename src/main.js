@@ -12,7 +12,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 
 
 clicker.addEventListener("click", function() {
-  let clickAmt = 1 + (click ** 3.05)
+  let clickAmt = 1 + (click ** 1.05)
   
   updateScore(clickAmt)
   clickSound.stop()
@@ -77,8 +77,8 @@ let upgradeFurCount = document.getElementById("upgradeFurCount")
 let time = 0
 
 upgradeFur.addEventListener("click", function() {
-  if (score >= 500) {
-    updateScore(-500)
+  if (score >= 50000) {
+    updateScore(-50000)
     time++
     upgradeFurCount.innerText = 'Amount:  ' + time
     clickTwo.stop()
@@ -95,8 +95,8 @@ let upgradeFivCount = document.getElementById("upgradeFivCount")
 let val = 0
 
 upgradeFiv.addEventListener("click", function() {
-  if (score >= 700) {
-    updateScore(-700)
+  if (score >= 70000) {
+    updateScore(-70000)
     val++
     upgradeFivCount.innerText = 'Amount:  ' + val
     clickTwo.stop()
@@ -113,8 +113,8 @@ let upgradeSixCount = document.getElementById("upgradeSixCount")
 let num = 0
 
 upgradeSix.addEventListener("click", function() {
-  if (score >= 1000) {
-    updateScore(-1000)
+  if (score >= 100000) {
+    updateScore(-100000)
     num++
     upgradeSixCount.innerText = 'Amount:  ' + num
     clickTwo.stop()
@@ -131,13 +131,19 @@ function updateScore(amount) {
   scoreDisplay.innerText = score.toFixed(0)  + '  Cash'
 }
 
+
 function gameLoop() {
-  let clickAmt = (value ** 1.05)
+  let clickAmt = (value ** 1.05) + (click ** 3.05) + (time ** 5.05) + (val ** 10.05) + (num ** 20.05)
 
   updateScore(clickAmt)
 }
 
 setInterval(gameLoop, 1000)
+setInterval(function() {
+  let clickAmt = (number ** 3.05) + (time ** 5.05) + (val ** 10.05) + (num ** 20.05)
+
+  updateScore(clickAmt)
+}, 1000)
 
 import { Howl } from 'howler';
 
